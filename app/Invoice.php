@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
+use App\Support\FilterPaginateOrder;
 use App\Customer;
 use App\InvoiceItem;
-use Illuminate\Database\Eloquent\Model;
 
 class Invoice extends Model
 {
+    use FilterPaginateOrder;
     protected $fillable = [
     	'customer_id', 'title', 'date', 'due_date', 'discount', 'sub_total', 'total'
     ];
@@ -29,7 +31,7 @@ class Invoice extends Model
     		'due_date' => null,
     		'discount' => 0,
     		'items' => [
-    			InvoiceItem::initialize();
+    			InvoiceItem::initialize()
     		]
     	];
     }
@@ -41,6 +43,6 @@ class Invoice extends Model
 
     public function customer()
     {
-    	return $this->belongTo(Customer::class);
+    	return $this->belongsTo(Customer::class);
     }
 }

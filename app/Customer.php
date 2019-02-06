@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Support\FilterPaginateOrder;
 
 class Customer extends Model
 {
+    use FilterPaginateOrder;
     protected $fillable = [
     	'company', 'email', 'name', 'phone', 'address'
     ];
