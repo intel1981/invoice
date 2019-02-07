@@ -8,24 +8,25 @@ use App\Support\FilterPaginateOrder;
 class Customer extends Model
 {
     use FilterPaginateOrder;
+
     protected $fillable = [
-    	'company', 'email', 'name', 'phone', 'address'
+        'company', 'email', 'name', 'phone', 'address'
     ];
 
+    // whitelist of filter-able columns
     protected $filter = [
-    	'id','company', 'email', 'name', 'phone', 'address', 'created_at'
+        'id', 'company', 'email', 'name', 'phone', 'address', 'created_at'
     ];
 
     public static function initialize()
     {
-    	return [
-    		'company' => '', 'email' => '', 'name' => '', 'phone' => '', 'address' => ''
-    	];
+        return [
+            'company' => '', 'email' => '', 'name' => '', 'phone' => '', 'address' => ''
+        ];
     }
 
-    //Un CUSTOMER genera (tiene) muchas INVOICES (facturas)
     public function invoices()
     {
-    	return $this->hasMany(Invoice::class);
+        return $this->hasMany(Invoice::class);
     }
 }

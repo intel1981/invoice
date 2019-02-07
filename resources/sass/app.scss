@@ -1,14 +1,41 @@
+.navbar {
+    margin-top: 15px;
+}
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-// Variables
-@import 'variables';
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &-column {
+        flex: 4;
+        padding-right: 15px;
+    }
+    &-operator {
+        flex: 4;
+        padding-right: 15px;
+    }
+    &-input {
+        flex: 6;
+        padding-right: 15px;
+    }
+    &-btn {
+        flex: 1;
+    }
+}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+.pagination-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.pagination-input {
+    width: 45px;
 }

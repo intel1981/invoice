@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class InvoiceItem extends Model
 {
     protected $fillable = [
-    	'description', 'qty', 'unit_price'
+        'description', 'qty', 'unit_price'
     ];
 
     public static function initialize()
     {
-    	return [
-    		'description' => '',
-    		'qty' => '',
-    		'unit_price' => ''
-    	];
+        return [
+            'description' => '',
+            'unit_price' => '',
+            'qty' => ''
+        ];
     }
 }
