@@ -2111,19 +2111,19 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         title: 'Company',
         key: 'company',
-        sort: true
+        sort: false
       }, {
         title: 'Name',
         key: 'name',
-        sort: true
+        sort: false
       }, {
         title: 'Email Address',
         key: 'email',
-        sort: true
+        sort: false
       }, {
         title: 'Created At',
         key: 'created_at',
-        sort: true
+        sort: false
       }],
       filter: ['id', 'company', 'name', 'email', 'phone', 'address']
     };
@@ -19253,7 +19253,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _views_customer_index_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: '/customer/create',
-    component: _views_customer_form_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _views_customer_form_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    name: 'createCustomer'
   }, {
     path: '/customer/:id/edit',
     component: _views_customer_form_vue__WEBPACK_IMPORTED_MODULE_3__["default"],

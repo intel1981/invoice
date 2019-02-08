@@ -11,8 +11,8 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
 	routes: [
-		{ path: '/', component: CustomerIndex },
-		{path: '/customer/create', component: CustomerForm},
+	{path: '/', component: CustomerIndex },
+	{path: '/customer/create', component: CustomerForm, name: 'createCustomer'},
     {path: '/customer/:id/edit', component: CustomerForm, meta: {mode: 'edit'}},
     {path: '/customer/:id', component: CategoryShow},
 

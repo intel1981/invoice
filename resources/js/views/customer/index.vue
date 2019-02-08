@@ -23,10 +23,10 @@
                 create: '/customer/create',
                 thead: [
                     {title: 'ID', key: 'id', sort: true},
-                    {title: 'Company', key: 'company', sort: true},
-                    {title: 'Name', key: 'name', sort: true},
-                    {title: 'Email Address', key: 'email', sort: true},
-                    {title: 'Created At', key: 'created_at', sort: true}
+                    {title: 'Company', key: 'company', sort: false},
+                    {title: 'Name', key: 'name', sort: false},
+                    {title: 'Email Address', key: 'email', sort: false},
+                    {title: 'Created At', key: 'created_at', sort: false}
                 ],
                 filter: [
                     'id', 'company', 'name', 'email', 'phone', 'address'
